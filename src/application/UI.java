@@ -4,6 +4,7 @@ import chess.ChessPiece;
 
 public class UI {
 
+	// imprime o tabuleiro atualizado com as peças em suas posições
 	public static void printBoard(ChessPiece[][] pieces) {
 
 		for (int i = 0; i < pieces.length; i++) {
@@ -18,6 +19,8 @@ public class UI {
 
 	}
 
+	// verifica se existe uma peça na posição verificada, se existir escreve a peça,
+	// se não escreve um traço
 	private static void printPiece(ChessPiece piece) {
 		if (piece == null) {
 			System.out.print("-");
