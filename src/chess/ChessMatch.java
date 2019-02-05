@@ -16,6 +16,7 @@ public class ChessMatch {
 		initialSetup();
 	}
 
+	//retorna matriz com as peças no tabuleiro
 	public ChessPiece[][] getPieces() {
 		ChessPiece[][] mat = new ChessPiece[board.getRows()][board.getColumns()];
 
@@ -26,9 +27,15 @@ public class ChessMatch {
 		return mat;
 	}
 
+	// irá posicionar uma nova peça de acordo com o sistema de coordenadas
+	private void placeNewPiece(char column, int row, ChessPiece piece) {
+		board.placePiece(piece, new ChessPosition(column, row).toPosition());
+	}
+
+	//setup inicial para posicionamento das peças
 	public void initialSetup() {
-		board.placePiece(new Rook(board, Color.WHITE), new Position(2, 1));
-		board.placePiece(new King(board, Color.BLACK), new Position(0, 4));
+		placeNewPiece('b', 7, new Rook(board, Color.WHITE));
+		placeNewPiece('a', 1, new King(board, Color.BLACK));
 		board.placePiece(new King(board, Color.WHITE), new Position(7, 4));
 	}
 }
