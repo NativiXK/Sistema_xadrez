@@ -1,9 +1,9 @@
 package chess.pieces;
 
-import java.awt.Color;
 
 import boardgame.Board;
 import chess.ChessPiece;
+import chess.Color;
 
 public class Bishop extends ChessPiece {
 

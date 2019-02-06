@@ -2,7 +2,6 @@ package application;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import java.util.zip.InflaterOutputStream;
 
 import chess.ChessException;
 import chess.ChessMatch;
