@@ -16,7 +16,7 @@ public class ChessMatch {
 		initialSetup();
 	}
 
-	//retorna matriz com as peças no tabuleiro
+	// retorna matriz com as peças no tabuleiro
 	public ChessPiece[][] getPieces() {
 		ChessPiece[][] mat = new ChessPiece[board.getRows()][board.getColumns()];
 
@@ -32,10 +32,21 @@ public class ChessMatch {
 		board.placePiece(piece, new ChessPosition(column, row).toPosition());
 	}
 
-	//setup inicial para posicionamento das peças
+	// setup inicial para posicionamento das peças
 	public void initialSetup() {
-		placeNewPiece('b', 7, new Rook(board, Color.WHITE));
-		placeNewPiece('a', 1, new King(board, Color.BLACK));
-		board.placePiece(new King(board, Color.WHITE), new Position(7, 4));
+		placeNewPiece('c', 1, new Rook(board, Color.WHITE));
+		placeNewPiece('c', 2, new Rook(board, Color.WHITE));
+		placeNewPiece('d', 2, new Rook(board, Color.WHITE));
+		placeNewPiece('e', 2, new Rook(board, Color.WHITE));
+		placeNewPiece('e', 1, new Rook(board, Color.WHITE));
+		placeNewPiece('d', 1, new King(board, Color.WHITE));
+
+		placeNewPiece('c', 7, new Rook(board, Color.BLACK));
+		placeNewPiece('c', 8, new Rook(board, Color.BLACK));
+		placeNewPiece('d', 7, new Rook(board, Color.BLACK));
+		placeNewPiece('e', 7, new Rook(board, Color.BLACK));
+		placeNewPiece('e', 8, new Rook(board, Color.BLACK));
+		placeNewPiece('d', 8, new King(board, Color.BLACK));
+
 	}
 }
