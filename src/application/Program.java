@@ -46,6 +46,9 @@ public class Program {
 			} catch (InputMismatchException e) {
 				System.out.println(e.getMessage());
 			}
+			catch (RuntimeException e) {
+				System.out.println("Error!");
+			}
 		}
 		UI.clearScreen();
 		UI.printMatch(chessMatch, captured);
